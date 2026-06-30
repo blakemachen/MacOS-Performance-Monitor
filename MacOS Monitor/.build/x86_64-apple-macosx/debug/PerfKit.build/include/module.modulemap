@@ -1,0 +1,3 @@
+module PerfKit {
+    header "/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/PerfKit.build/include/PerfKit-Swift.h"
+}

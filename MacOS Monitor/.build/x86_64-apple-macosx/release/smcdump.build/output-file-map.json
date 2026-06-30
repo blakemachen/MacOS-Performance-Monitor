@@ -1,0 +1,13 @@
+{
+  "": {
+    "dependencies": "/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/release/smcdump.build/smcdump.d",
+    "object": "/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/release/smcdump.build/smcdump.o",
+    "swift-dependencies": "/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/release/smcdump.build/primary.swiftdeps"
+  },
+  "/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/Sources/smcdump/main.swift": {
+    "object": "/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/release/smcdump.build/main.swift.o",
+    "swiftmodule": "/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/release/smcdump.build/main~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/release/smcdump.build/main.swiftdeps",
+    "diagnostics": "/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/release/smcdump.build/main.dia"
+  }
+}

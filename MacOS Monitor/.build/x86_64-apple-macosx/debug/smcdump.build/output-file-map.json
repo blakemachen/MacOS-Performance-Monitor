@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/smcdump.build/primary.swiftdeps"
+  },
+  "/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/Sources/smcdump/main.swift": {
+    "dependencies": "/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/smcdump.build/main.d",
+    "object": "/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/smcdump.build/main.swift.o",
+    "swiftmodule": "/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/smcdump.build/main~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/smcdump.build/main.swiftdeps",
+    "diagnostics": "/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/smcdump.build/main.dia"
+  }
+}

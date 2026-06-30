@@ -1,0 +1,159 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "PackageStructure": ["<PackageStructure>"]
+  "PerfKit-x86_64-apple-macosx-debug.module": ["<PerfKit-x86_64-apple-macosx-debug.module>"]
+  "PerfMonitor-x86_64-apple-macosx-debug.exe": ["<PerfMonitor-x86_64-apple-macosx-debug.exe>"]
+  "PerfMonitor-x86_64-apple-macosx-debug.module": ["<PerfMonitor-x86_64-apple-macosx-debug.module>"]
+  "main": ["<PerfKit-x86_64-apple-macosx-debug.module>","<PerfMonitor-x86_64-apple-macosx-debug.exe>","<PerfMonitor-x86_64-apple-macosx-debug.module>","<smcdump-x86_64-apple-macosx-debug.exe>","<smcdump-x86_64-apple-macosx-debug.module>"]
+  "smcdump-x86_64-apple-macosx-debug.exe": ["<smcdump-x86_64-apple-macosx-debug.exe>"]
+  "smcdump-x86_64-apple-macosx-debug.module": ["<smcdump-x86_64-apple-macosx-debug.module>"]
+  "test": ["<PerfKit-x86_64-apple-macosx-debug.module>","<PerfMonitor-x86_64-apple-macosx-debug.exe>","<PerfMonitor-x86_64-apple-macosx-debug.module>","<smcdump-x86_64-apple-macosx-debug.exe>","<smcdump-x86_64-apple-macosx-debug.module>"]
+default: "main"
+nodes:
+  "/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/Sources/PerfKit/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/Sources/PerfMonitor/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/Sources/smcdump/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/PerfMonitor":
+    is-mutated: true
+  "/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/smcdump":
+    is-mutated: true
+commands:
+  "/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/PerfKit.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/Sources/PerfKit/SMC.swift","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/Sources/PerfKit/SystemStats.swift"]
+    outputs: ["/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/PerfKit.build/sources"]
+    description: "Write auxiliary file /Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/PerfKit.build/sources"
+
+  "/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/PerfMonitor-entitlement.plist":
+    tool: write-auxiliary-file
+    inputs: ["<entitlement-plist>","<com.apple.security.get-task-allow>"]
+    outputs: ["/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/PerfMonitor-entitlement.plist"]
+    description: "Write auxiliary file /Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/PerfMonitor-entitlement.plist"
+
+  "/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/PerfMonitor.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/Sources/PerfMonitor/ContentView.swift","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/Sources/PerfMonitor/PerfMonitorApp.swift"]
+    outputs: ["/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/PerfMonitor.build/sources"]
+    description: "Write auxiliary file /Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/PerfMonitor.build/sources"
+
+  "/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/PerfMonitor.product/Objects.LinkFileList":
+    tool: write-auxiliary-file
+    inputs: ["<link-file-list>","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/PerfKit.build/SMC.swift.o","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/PerfKit.build/SystemStats.swift.o","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/PerfMonitor.build/ContentView.swift.o","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/PerfMonitor.build/PerfMonitorApp.swift.o"]
+    outputs: ["/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/PerfMonitor.product/Objects.LinkFileList"]
+    description: "Write auxiliary file /Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/PerfMonitor.product/Objects.LinkFileList"
+
+  "/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/smcdump-entitlement.plist":
+    tool: write-auxiliary-file
+    inputs: ["<entitlement-plist>","<com.apple.security.get-task-allow>"]
+    outputs: ["/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/smcdump-entitlement.plist"]
+    description: "Write auxiliary file /Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/smcdump-entitlement.plist"
+
+  "/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/smcdump.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/Sources/smcdump/main.swift"]
+    outputs: ["/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/smcdump.build/sources"]
+    description: "Write auxiliary file /Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/smcdump.build/sources"
+
+  "/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/smcdump.product/Objects.LinkFileList":
+    tool: write-auxiliary-file
+    inputs: ["<link-file-list>","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/PerfKit.build/SMC.swift.o","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/PerfKit.build/SystemStats.swift.o","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/smcdump.build/main.swift.o"]
+    outputs: ["/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/smcdump.product/Objects.LinkFileList"]
+    description: "Write auxiliary file /Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/smcdump.product/Objects.LinkFileList"
+
+  "/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/Library/Developer/CommandLineTools/usr/bin/swiftc"]
+    outputs: ["/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+
+  "<PerfKit-x86_64-apple-macosx-debug.module>":
+    tool: phony
+    inputs: ["/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/PerfKit.build/SMC.swift.o","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/PerfKit.build/SystemStats.swift.o","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/Modules/PerfKit.swiftmodule"]
+    outputs: ["<PerfKit-x86_64-apple-macosx-debug.module>"]
+
+  "<PerfMonitor-x86_64-apple-macosx-debug.exe>":
+    tool: phony
+    inputs: ["<PerfMonitor-x86_64-apple-macosx-debug.exe-CodeSigning>"]
+    outputs: ["<PerfMonitor-x86_64-apple-macosx-debug.exe>"]
+
+  "<PerfMonitor-x86_64-apple-macosx-debug.module>":
+    tool: phony
+    inputs: ["/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/PerfMonitor.build/ContentView.swift.o","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/PerfMonitor.build/PerfMonitorApp.swift.o","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/Modules/PerfMonitor.swiftmodule"]
+    outputs: ["<PerfMonitor-x86_64-apple-macosx-debug.module>"]
+
+  "<smcdump-x86_64-apple-macosx-debug.exe>":
+    tool: phony
+    inputs: ["<smcdump-x86_64-apple-macosx-debug.exe-CodeSigning>"]
+    outputs: ["<smcdump-x86_64-apple-macosx-debug.exe>"]
+
+  "<smcdump-x86_64-apple-macosx-debug.module>":
+    tool: phony
+    inputs: ["/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/smcdump.build/main.swift.o","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/Modules/smcdump.swiftmodule"]
+    outputs: ["<smcdump-x86_64-apple-macosx-debug.module>"]
+
+  "C.PerfKit-x86_64-apple-macosx-debug.module":
+    tool: shell
+    inputs: ["/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/Sources/PerfKit/SMC.swift","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/Sources/PerfKit/SystemStats.swift","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/PerfKit.build/sources"]
+    outputs: ["/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/PerfKit.build/SMC.swift.o","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/PerfKit.build/SystemStats.swift.o","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/Modules/PerfKit.swiftmodule"]
+    description: "Compiling Swift Module 'PerfKit' (2 sources)"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-module-name","PerfKit","-emit-dependencies","-emit-module","-emit-module-path","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/Modules/PerfKit.swiftmodule","-output-file-map","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/PerfKit.build/output-file-map.json","-parse-as-library","-incremental","-c","@/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/PerfKit.build/sources","-I","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/Modules","-target","x86_64-apple-macosx14.0","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j12","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/PerfKit.build/include/PerfKit-Swift.h","-swift-version","5","-I","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-L","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-plugin-path","/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g","-Xcc","-isysroot","-Xcc","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-Xcc","-fPIC","-Xcc","-g","-package-name","perfmonitor"]
+
+  "C.PerfMonitor-x86_64-apple-macosx-debug.exe":
+    tool: shell
+    inputs: ["/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/PerfKit.build/SMC.swift.o","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/PerfKit.build/SystemStats.swift.o","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/PerfMonitor.build/ContentView.swift.o","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/PerfMonitor.build/PerfMonitorApp.swift.o","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/PerfMonitor.product/Objects.LinkFileList"]
+    outputs: ["/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/PerfMonitor"]
+    description: "Linking ./.build/x86_64-apple-macosx/debug/PerfMonitor"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-L","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug","-o","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/PerfMonitor","-module-name","PerfMonitor","-Xlinker","-no_warn_duplicate_libraries","-emit-executable","-Xlinker","-alias","-Xlinker","_PerfMonitor_main","-Xlinker","_main","-Xlinker","-rpath","-Xlinker","@loader_path","@/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/PerfMonitor.product/Objects.LinkFileList","-Xlinker","-rpath","-Xlinker","/Library/Developer/CommandLineTools/usr/lib/swift-6.2/macosx","-target","x86_64-apple-macosx14.0","-framework","IOKit","-Xlinker","-add_ast_path","-Xlinker","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/Modules/PerfKit.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/Modules/PerfMonitor.swiftmodule","-I","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-L","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-plugin-path","/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g"]
+
+  "C.PerfMonitor-x86_64-apple-macosx-debug.exe-entitlements":
+    tool: shell
+    inputs: ["/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/PerfMonitor","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/PerfMonitor-entitlement.plist"]
+    outputs: ["<PerfMonitor-x86_64-apple-macosx-debug.exe-CodeSigning>"]
+    description: "Applying debug entitlements to ./.build/x86_64-apple-macosx/debug/PerfMonitor"
+    args: ["codesign","--force","--sign","-","--entitlements","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/PerfMonitor-entitlement.plist","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/PerfMonitor"]
+
+  "C.PerfMonitor-x86_64-apple-macosx-debug.module":
+    tool: shell
+    inputs: ["/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/Sources/PerfMonitor/ContentView.swift","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/Sources/PerfMonitor/PerfMonitorApp.swift","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/Modules/PerfKit.swiftmodule","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/PerfMonitor.build/sources"]
+    outputs: ["/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/PerfMonitor.build/ContentView.swift.o","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/PerfMonitor.build/PerfMonitorApp.swift.o","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/Modules/PerfMonitor.swiftmodule"]
+    description: "Compiling Swift Module 'PerfMonitor' (2 sources)"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-module-name","PerfMonitor","-emit-dependencies","-emit-module","-emit-module-path","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/Modules/PerfMonitor.swiftmodule","-output-file-map","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/PerfMonitor.build/output-file-map.json","-incremental","-c","@/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/PerfMonitor.build/sources","-I","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/Modules","-target","x86_64-apple-macosx14.0","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j12","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/ModuleCache","-parseable-output","-Xfrontend","-entry-point-function-name","-Xfrontend","PerfMonitor_main","-swift-version","5","-I","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-L","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-plugin-path","/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g","-Xcc","-isysroot","-Xcc","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-Xcc","-fPIC","-Xcc","-g","-package-name","perfmonitor"]
+
+  "C.smcdump-x86_64-apple-macosx-debug.exe":
+    tool: shell
+    inputs: ["/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/PerfKit.build/SMC.swift.o","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/PerfKit.build/SystemStats.swift.o","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/smcdump.build/main.swift.o","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/smcdump.product/Objects.LinkFileList"]
+    outputs: ["/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/smcdump"]
+    description: "Linking ./.build/x86_64-apple-macosx/debug/smcdump"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-L","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug","-o","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/smcdump","-module-name","smcdump","-Xlinker","-no_warn_duplicate_libraries","-emit-executable","-Xlinker","-alias","-Xlinker","_smcdump_main","-Xlinker","_main","-Xlinker","-rpath","-Xlinker","@loader_path","@/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/smcdump.product/Objects.LinkFileList","-Xlinker","-rpath","-Xlinker","/Library/Developer/CommandLineTools/usr/lib/swift-6.2/macosx","-target","x86_64-apple-macosx14.0","-framework","IOKit","-Xlinker","-add_ast_path","-Xlinker","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/Modules/PerfKit.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/Modules/smcdump.swiftmodule","-I","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-L","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-plugin-path","/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g"]
+
+  "C.smcdump-x86_64-apple-macosx-debug.exe-entitlements":
+    tool: shell
+    inputs: ["/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/smcdump","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/smcdump-entitlement.plist"]
+    outputs: ["<smcdump-x86_64-apple-macosx-debug.exe-CodeSigning>"]
+    description: "Applying debug entitlements to ./.build/x86_64-apple-macosx/debug/smcdump"
+    args: ["codesign","--force","--sign","-","--entitlements","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/smcdump-entitlement.plist","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/smcdump"]
+
+  "C.smcdump-x86_64-apple-macosx-debug.module":
+    tool: shell
+    inputs: ["/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/Sources/smcdump/main.swift","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/Modules/PerfKit.swiftmodule","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/smcdump.build/sources"]
+    outputs: ["/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/smcdump.build/main.swift.o","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/Modules/smcdump.swiftmodule"]
+    description: "Compiling Swift Module 'smcdump' (1 sources)"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-module-name","smcdump","-emit-dependencies","-emit-module","-emit-module-path","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/Modules/smcdump.swiftmodule","-output-file-map","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/smcdump.build/output-file-map.json","-incremental","-c","@/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/smcdump.build/sources","-I","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/Modules","-target","x86_64-apple-macosx14.0","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j12","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/.build/x86_64-apple-macosx/debug/ModuleCache","-parseable-output","-Xfrontend","-entry-point-function-name","-Xfrontend","smcdump_main","-swift-version","5","-I","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-L","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-plugin-path","/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g","-Xcc","-isysroot","-Xcc","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-Xcc","-fPIC","-Xcc","-g","-package-name","perfmonitor"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/Sources/PerfKit/","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/Sources/PerfMonitor/","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/Sources/smcdump/","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/Package.swift","/Users/jaredphilscofer/Desktop/MinecraftSeige/PerfMonitor/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+
