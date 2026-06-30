@@ -2,7 +2,7 @@
 
 A lightweight native macOS app showing **live system performance** — CPU usage & temperature, memory usage, and GPU temperature — in a clean tabbed SwiftUI interface.
 
-![tabs: CPU · Memory · Temps](#)
+tabs: CPU · Memory · Temps
 
 ## Features
 
